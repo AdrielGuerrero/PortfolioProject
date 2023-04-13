@@ -12,19 +12,18 @@
 
 
 
- --Standerize date format
+ --Standerize date format 
 
-  select SaleDateConverted, CONVERT(Date, SaleDate)
-  from PortfolioProject.dbo.NashvilleHousing
+select date, convert(date, date) from coviddeaths
 
-  update NashvilleHousing
-  Set SaleDate = Convert(Date, SaleDate)
 
-  alter table NashvilleHousing
-  add SaleDateConverted Date ;
+alter table coviddeaths
+add saledateconverted varchar(255);
 
-  update NashvilleHousing
-  set SaleDateConverted = Convert (Date, SaleDate)
+
+update covid deaths
+set saledateconverted = convert(date, date)
+
 
 
 
